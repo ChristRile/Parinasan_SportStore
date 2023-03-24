@@ -21,17 +21,24 @@ namespace Parinasan_SportStore.Models
 				context.Products.AddRange(
 					new Product
 					{
-						Name = "Kayak",
-						Description = "A boat for one person",
-						Category = "Watersports",
-						Price = 275
+						Name = "Full-Body Hocky Gear",
+						Description = "Includes Helmet, Neckguard, Shoulder Pads, Gloves, Shin Pads and Elbow Pads",
+						Category = "Hockey",
+						Price = 700m
 					},
 					new Product
 					{
-						Name = "Lifejacket",
-						Description = "Protective and fashionable",
-						Category = "Watersports",
-						Price = 49.95m
+						Name = "Hockey Equiments",
+						Description = "Includes Skates, Hockey Sticks, Hockey Bag",
+						Category = "Hockey",
+						Price = 499m
+					},
+					new Product
+					{
+						Name = "Hockey Defenseman",
+						Description = "Includes Skates, Hockey Sticks and defenseman",
+						Category = "Hockey",
+						Price = 499m
 					},
 					new Product
 					{
@@ -42,52 +49,59 @@ namespace Parinasan_SportStore.Models
 					},
 					new Product
 					{
-						Name = "Corner Flags",
-						Description = "Give your playing field a professional touch",
+						Name = "Soccer Shoes",
+						Description = "Nike Signature Soccer Shoes",
 						Category = "Soccer",
-						Price = 34.95m
+						Price = 200m
 					},
 					new Product
 					{
 						Name = "Basketball",
 						Description = "NBA-approved size and weight",
 						Category = "Basketball",
+						Price = 190m
+					},
+					new Product
+					{
+						Name = "Racket",
+						Description = "Badminton regular size",
+						Category = "Badminton",
 						Price = 25.95m
 					},
 					new Product
 					{
-						Name = "Basketball",
-						Description = "NBA-approved size and weight",
-						Category = "Basketball",
+						Name = "Butt Cap",
+						Description = "Badminton comfortable cap",
+						Category = "Badminton",
 						Price = 25.95m
 					},
 					new Product
 					{
-						Name = "Basketball",
-						Description = "NBA-approved size and weight",
+						Name = "Basketball Stadium",
+						Description = "NBA sized Gymnasium",
 						Category = "Basketball",
-						Price = 25.95m
+						Price = 25000m
 					},
 					new Product
 					{
-						Name = "Basketball",
-						Description = "NBA-approved size and weight",
+						Name = "Basketball Hoop",
+						Description = "NBA size hoop",
 						Category = "Basketball",
-						Price = 25.95m
+						Price = 800m
 					},
 					new Product
 					{
-						Name = "Basketball",
-						Description = "NBA-approved size and weight",
-						Category = "Basketball",
-						Price = 25.95m
+						Name = "Goal Post (2)",
+						Description = " 2 FIFA sized Goal Post",
+						Category = "Soccer",
+						Price = 1500m
 					},
 					new Product
 					{
-						Name = "Basketball",
-						Description = "NBA-approved size and weight",
-						Category = "Basketball",
-						Price = 25.95m
+						Name = "Shuttlecock",
+						Description = "Regular Size Badminton Shuttlecock",
+						Category = "Badminton",
+						Price = 10.95m
 					}
 				);
 				context.SaveChanges();

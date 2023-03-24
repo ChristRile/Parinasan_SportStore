@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Mvc;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Parinasan_SportStore.Models;
 
@@ -30,10 +32,19 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// to use the method (?) wako ka apas HHAHHAHAHAHA
 app.UseStaticFiles();
-app.MapControllerRoute("pagination","Products/Page{productPage}",new{ Controller = "Home", action = "Index"});
+app.MapControllerRoute("catpage","{category}/Page{productPage:int}",
+new { Controller = "Home", action = "Index" });
+
+app.MapControllerRoute("page", "Page{productPage:int}",
+new { Controller = "Home", action = "Index", productPage = 1 });
+
+app.MapControllerRoute("category", "{category}",
+new { Controller = "Home", action = "Index", productPage = 1 });
+
+app.MapControllerRoute("pagination","Products/Page{productPage}",
+new { Controller = "Home", action = "Index", productPage = 1 });
+
 app.UseRouting();
 
 app.UseAuthorization();

@@ -14,10 +14,11 @@ namespace Parinasan_SportStore.Controllers
 			this.repository = repository;
 		}
 
-		public ViewResult Index(int productPage = 1)
+		public ViewResult Index(string? category, int productPage = 1)
 			=> View(new ProductsListViewModel
 			{
 				Products = repository.Products
+				.Where(p => category == null || p.Category == category)
 				.OrderBy(p => p.ProductID)
 				.Skip((productPage - 1) * pageSize)
 				.Take(pageSize),
@@ -26,7 +27,8 @@ namespace Parinasan_SportStore.Controllers
 					CurrentPage = productPage,
 					ItemsPerPage = pageSize,
 					TotalItems = repository.Products.Count()
-				}
+				},
+				CurrentCategory = category
 			});
 	}
 }
