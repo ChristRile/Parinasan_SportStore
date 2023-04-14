@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Parinasan_SportStore.Models;
 
 namespace Parinasan_SportStore.Components
 {
@@ -6,7 +7,8 @@ namespace Parinasan_SportStore.Components
 	{
 		public string Invoke()
 		{
-			return "Hello from the Nav View Component";
+			return "Hello from";
 		}
 	}
+	
 }
